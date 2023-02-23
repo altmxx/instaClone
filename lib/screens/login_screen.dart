@@ -19,6 +19,7 @@ class _LoginScreenState extends State<LoginScreen> {
     // TODO: implement dispose
     super.dispose();
     _emailController.dispose();
+    _passController.dispose();
   }
 
   @override
@@ -51,19 +52,47 @@ class _LoginScreenState extends State<LoginScreen> {
               textInputType: TextInputType.text,
               isPass: true,
             ),
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 24),
-              width: double.infinity,
-              alignment: Alignment.center,
-              padding: const EdgeInsets.symmetric(vertical: 12),
-              decoration: const ShapeDecoration(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(4)),
+            InkWell(
+              onTap: () {},
+              child: Container(
+                margin: EdgeInsets.symmetric(vertical: 24),
+                width: double.infinity,
+                alignment: Alignment.center,
+                padding: const EdgeInsets.symmetric(vertical: 12),
+                decoration: const ShapeDecoration(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(4)),
+                  ),
+                  color: blueColor,
                 ),
-                color: blueColor,
+                child: const Text('Login'),
               ),
-              child: const Text('Login'),
-            )
+            ),
+            const Expanded(
+              child: SizedBox(),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  padding: EdgeInsets.symmetric(vertical: 8),
+                  child: const Text('Don\'t have an account? '),
+                ),
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    padding: EdgeInsets.symmetric(vertical: 8),
+                    child: const Text(
+                      'Sign Up',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.lightBlueAccent,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       )),

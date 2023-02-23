@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:instaclone/screens/login_screen.dart';
+import 'package:instaclone/screens/sign_up_screen.dart';
 import 'firebase_options.dart';
 import 'package:instaclone/responsive/mobile_screen_layout.dart';
 import 'package:instaclone/responsive/responsive_layout_screen.dart';
